@@ -1,0 +1,80 @@
+.gameDiv{
+    margin-top:30px; 
+    height: 600px ;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.gameDiv iframe{
+    box-shadow: 5px 5px 30px 7px #00e7fc65;
+}
+
+
+
+/***********************************************/
+
+
+/* Add this CSS to your styles.css file or within a <style> tag */
+
+.fixed {
+    position: fixed;
+    right: 1.5rem; /* 6 * 0.25rem (1rem = 16px) */
+    bottom: 150px; /* 6 * 0.25rem (1rem = 16px) */
+  }
+  
+  .my-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    color: #6b7280; /* text-gray-500 */
+    background-color: #ffffff; /* bg-white */
+    border-radius: 50%;
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+    ring: 1px solid #ffbf00; /* ring-amber */
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+  }
+  
+  .my-button:hover {
+    color: #e80a0a; /* hover:text-gray-900 */
+    background-color: #f9fafb; /* hover:bg-gray-50 */
+  }
+  
+  .my-button:focus {
+    outline: none;
+    ring: 4px solid #d1d5db; /* focus:ring-gray-300 */
+  }
+  
+  .my-button:focus-visible {
+    ring: 4px solid #d1d5db; /* focus:ring-gray-300 */
+  }
+  
+  .my-button.dark {
+    border-color: #4b5563; /* dark:border-gray-600 */
+    color: #9ca3af; /* dark:text-gray-400 */
+    background-color: #374151; /* dark:bg-gray-700 */
+  }
+  
+  .my-button.dark:hover {
+    color: #ffffff; /* dark:hover:text-white */
+    background-color: #4b5563; /* dark:hover:bg-gray-600 */
+  }
+  
+  .my-button.dark:focus {
+    ring: 4px solid #9ca3af; /* dark:focus:ring-gray-400 */
+  }
+  
+  /* Screen reader only class */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
