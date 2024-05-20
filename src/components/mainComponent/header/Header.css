@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Cursors/Ghost.cur"), auto;
+
+}
+
+/* 
+---------------------------------------------
+Header 
+--------------------------------------------- 
+*/
+
+.navMenu {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.navMenu img {
+  height: 40px; 
+  transition: height 0.2s ease-in-out;
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em; /* == font Resize for responsive == */
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0 0 5px rgba(45, 152, 210, 0.697),
+    0 0 10px rgba(120, 120, 241, 0.4),
+    0 0 15px rgba(161, 91, 165, 0.3),
+    0 0 20px rgba(216, 48, 194, 0.2);
+}
+
+.navMenu a:hover {
+  color: #49415d;
+}
+
+/* .navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #49415d;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
+} */
+
+/* Dot director (under the hider) */
+/* .navMenu a:nth-child(2):hover ~ .dot {
+  transform: translateX(calc(100% + 20px)); 
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  transform: translateX(calc(200% + 40px)); 
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  transform: translateX(calc(300% + 60px)); 
+  opacity: 1;
+} */
+
+/* Responsive styles */
+/* logo resposive with 768 screens size  */
+@media (max-width: 768px) {
+  .navMenu {
+    top: 10px;
+    gap: 10px;
+  }
+
+  .navMenu img {
+    height: 30px; 
+  }
+
+  .navMenu a {
+    font-size: 1em;
+  }
+}
+
+/* logo response with 480 screens size */
+@media (max-width: 480px) {
+  .navMenu {
+    top: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .navMenu img {
+    height: 25px; 
+  }
+
+  .navMenu a {
+    font-size: 0.9em;
+  }
+
+  /* .navMenu .dot {
+    display: none; /* Hide dot on small screens for simplicity 
+  } */
+}
