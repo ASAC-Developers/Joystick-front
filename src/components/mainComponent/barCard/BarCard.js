@@ -42,7 +42,7 @@ const BarCardSlider = () => {
 
   return (
     <div className="containerCards">
-      <h1 className="sliderTitle">Our Featured Cards</h1>
+      <h1 className="sliderTitle">Online Games</h1>
       <Slider {...settings}>
 
         <div className="barCard">
