@@ -1,0 +1,14 @@
+.about {
+    background-color: #8B2C59;
+    background-image:"/home/sham/Travel-Destination/my-app/my-app/src/logo.svg" ;
+    text-decoration-color: #e1e1e1;
+    flex-direction: column;
+    text-align: center;
+    color:#5B35B4;
+
+    
+}
+.about .p{
+    color:#5B35B4;
+
+}
