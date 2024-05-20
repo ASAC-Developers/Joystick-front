@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Card(props) {
   return (
     <>
-    {console.log(props.item.id)}
+    {/* {console.log(props.item.id)} */}
 
     
     <div>

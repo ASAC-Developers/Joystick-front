@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../card/Card'
 import './Cards.css'
 const gamesData = require( '../../../data/games.json');
+// fetch all games from DB 
 
 function Cards() {
   

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+
+.game-card {
+
+
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(236, 24, 179, 0.125);  
+  padding: 38px;  
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.125);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  height: 400px;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-content {
+  width: 100%;
+  height: 100%;
+}
+
+.game-banner {
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.255);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-banner:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.98);
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: rgba(0, 212, 255, 0.9);
+}
+
+p {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button-container {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.game-btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.game-btn.outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.game-btn.outline:hover {
+  transform: scale(1.125);
+ color: rgba(255, 0, 0, 0.628);
+  border: 1px solid rgba(255, 0, 0, 0.406);
+}
+
+.game-btn.fill {
+  background:  linear-gradient(to right top, #8b2c59, #8d246b, #892381, #7a299a, #5b35b4);
+  box-shadow: 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.751);
+}
+
+.game-btn.fill:hover {
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+}
+/***************************************************/
