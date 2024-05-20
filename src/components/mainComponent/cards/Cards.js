@@ -7,7 +7,9 @@ function Cards() {
   
   return (
     <>
-    <p className='cardSectiontext' style={{"color": "white"}}>let's play!</p>
+
+
+    <p className='cardSectiontext' style={{"color": "white"}}>Let's play!</p>
     <div className="cards-list">
     
       {
