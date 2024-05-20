@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.cardsContainer {
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  padding: 20px;  
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.125);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* Adjusted to center the content */
+  gap: 20px; /* Space between cards */
+  margin-top: 50px;
+}
