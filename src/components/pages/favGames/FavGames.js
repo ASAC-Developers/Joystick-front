@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FavCard from './../../mainComponent/favCard/FavCard';
 import './FavGames.css';
-const gamesData = require( '../../../data/games.json');
-//Fetch fav games fom DB 
+
+
 
 
 function FavGames() {
+
+  const [favoriteGames, setFavoriteGames] = useState(JSON.parse(localStorage.getItem('fav')) || []);
+  
+
+  function onReload(){
+    
+    setFavoriteGames(JSON.parse(localStorage.getItem('fav')) || []);
+
+  }
+
+
   return (
     
       <>
        <div className='cardsContainer'>
-      {
-        gamesData.map((item)=>{
-          return <FavCard item={item}/>
-        })
-      }</div>
+      
+      {favoriteGames.length == 0 ? <h1>The favorite list is empty, try adding some... 🕹</h1> : 
+       favoriteGames.map((item)=>{
+          return <FavCard key={item.id} item={item} onReload={onReload}/>
+        })}
+      </div>
       </>
     
-  )
+  );
 }
 
 export default FavGames
