@@ -4,6 +4,7 @@ import './BarCard.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
+import Loading from '../loading/Loading';
 
 //Fetch the data from api => Add(Image, Title, Description, Release Date, GameURL=>WebSite ) 
 const BarCardSlider = () => {
@@ -67,7 +68,7 @@ const BarCardSlider = () => {
 
     
 
-      {isLoading? <h1>Loading ...</h1> : 
+      {isLoading?  <Loading/> : 
         <Slider {...settings}>
           
       {gamesData.map((game) =>

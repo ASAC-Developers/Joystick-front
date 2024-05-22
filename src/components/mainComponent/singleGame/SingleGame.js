@@ -1,73 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './SingleGame.css';
 import { HiHeart } from "react-icons/hi";
 
-
 function SingleGame() {
+  const { id } = useParams();
+  const [isFavorite, setIsFavorite] = useState(false);
 
-    
-    const { id } = useParams();
+  const allGames = JSON.parse(localStorage.getItem('allGamesFromDB'));
+  const game = allGames.find(ga => ga.id == id);
 
-
-  let allGames = JSON.parse(localStorage.getItem('allGamesFromDB'));
-  
- 
-
-  let game = allGames.find(ga => ga.id == id);
-
-
-  function changeFavorite(){
+  useEffect(() => {
     const favoriteGames = JSON.parse(localStorage.getItem('fav')) || [];
+    const alreadyInFav = favoriteGames.some((game) => game.id == id);
+    setIsFavorite(alreadyInFav);
+  }, [id]);
 
-    if (favoriteGames) {
-      
-      const alreadyInFav = favoriteGames.some((game)=> game.id == id);
-      
-      
-      if (alreadyInFav) {
-        //remove it from favorite list
+  function changeFavorite() {
+    const favoriteGames = JSON.parse(localStorage.getItem('fav')) || [];
+    let newFav;
 
-        let newFav = favoriteGames.filter((g) => g.id != id );
-        localStorage.setItem('fav', JSON.stringify(newFav));
-
-      }else{
-        favoriteGames.push(game);
-        localStorage.setItem('fav', JSON.stringify(favoriteGames));
-      }
-     
-
-    }else{
-
-      let newFav = []
-      localStorage.setItem('fav', JSON.stringify(newFav))
+    if (isFavorite) {
+      newFav = favoriteGames.filter((g) => g.id != id);
+    } else {
+      newFav = [...favoriteGames, game];
     }
+
+    localStorage.setItem('fav', JSON.stringify(newFav));
+    setIsFavorite(!isFavorite);
   }
+
   return (
     <>
-
-<div className="fixed right-6 bottom-6">
-  {/*  fav btn */}
-      <button
-        type="button"
-        className="my-button"
-        onClick={changeFavorite}
-      >
-        <HiHeart size={30} 
-        // color={isFav ? "#D72323" : ""}
+      <div className='favbtncontainer'>
+        <input 
+          id="toggle-heart" 
+          type="checkbox" 
+          checked={isFavorite} 
+          onChange={changeFavorite} 
         />
-        <span className="sr-only">Share</span>
-      </button>
-    </div>
-    
-    <div className='gameDiv'>
-      <iframe width="80%" height="80%"
+        <label htmlFor="toggle-heart" aria-label="like">❤</label>
+      </div>
+
+      <div className='gameDiv'>
+        <iframe 
+          width="80%" 
+          height="100%"
           src={game.url}
-          frameborder="0" allowfullscreen="" >
-        </iframe>
-    </div>
+          frameBorder="0" 
+          allowFullScreen="" 
+        />
+      </div>
     </>
-  )
+  );
 }
 
-export default SingleGame
+export default SingleGame;
