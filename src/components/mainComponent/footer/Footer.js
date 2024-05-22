@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import logoBanner from '../../../assets/logo2.png';
+import logoBanner from '../../../assets/logo0.png';
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 <div align="center">
 
 
-  <img src="/src/assets/logo2.png" alt="logo" width="200" height="auto" />
+  <img src="/src/assets/logo001.png" alt="logo" width="200" height="auto" />
   <h1>JOUYSTICK APP</h1>
   
   <p> </p>
@@ -10,7 +10,7 @@
 
    
 <h4>
-    <a href="#">View Demo</a>
+    <a href="#">View Demo**************</a>
 </div>
 
 <br />
@@ -40,7 +40,7 @@
 
 <div align="center"> 
 <!--Screen our app  -->
-  <img src="#" alt="screenshot" />
+  <img src="#" alt="screenshot******************" />
 </div>
 
 
@@ -62,6 +62,7 @@
     <li><a href="https://www.figma.com/">Figma </a></li>
     <li><a href="https://www.atlassian.com/software/jira">JIRA Board</a></li>
     <li><a href="https://code.visualstudio.com/">Visual Studio code</a></li>
+     <li><a href="https://miro.com/legal/terms-of-service/">Miro</a></li>
     <li><a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software">MicroSoft Teams</a></li>
   </ul>
 </details>
@@ -108,13 +109,13 @@ This project uses npm as package manager
 Clone the project
 
 ```bash
-  git clone https://github.com/.git***
+  git clone git@github.com:ASAC-Developers/Joystick-front.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd joystic***
+  cd Joystick-front
 ```
 
 Install dependencies
