@@ -18,7 +18,7 @@
        #6b43b598, #4f59cc85, #006de16a, #008ff55b, #00aefe5e, #00ccff53, #00e7fc57);      
       top: 0;
       left: 0;
-      bottom: -17px;
+      bottom: 0%;
       width: 100%;
   }
   
@@ -72,5 +72,5 @@ Logo
 --------------------------------------------- 
 */
   .logo-joystic{
-    width: 10%;
+    width: 16%;
   }
