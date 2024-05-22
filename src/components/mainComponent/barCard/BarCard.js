@@ -3,12 +3,13 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './BarCard.css';
 import axios from 'axios';
-
+import '../loading/Loading'
+ 
 const BarCardSlider = () => {
   // Fetching data from the server
   const [gamesData, setGamesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+ 
   useEffect(() => {
     async function getAllOnlineGames() {
       try {
@@ -20,19 +21,19 @@ const BarCardSlider = () => {
         console.error('Error fetching games:', error);
       }
     }
-
+ 
     getAllOnlineGames();
   }, []);
-
+ 
   return (
     <div className="containerCards">
       <h1 className="sliderTitle">Online Games</h1>
       {isLoading ? (
-        <h1>Loading ...</h1>
+        <Loading/>
       ) : (
-        <Carousel 
-          showArrows={true} 
-          showThumbs={false} 
+        <Carousel
+          showArrows={true}
+          showThumbs={false}
           showIndicators={false}
           infiniteLoop={true}
           autoPlay={true}
@@ -42,7 +43,7 @@ const BarCardSlider = () => {
           swipeable={true}
           emulateTouch={true}
         >
-
+ 
           {gamesData.map((game) => (
             <div className='singleCard'>
             <div key={game.id} className="barCard">
@@ -63,9 +64,9 @@ const BarCardSlider = () => {
     </div>
   );
 };
-
+ 
 function openGame(url) {
   window.open(url);
 }
-
+ 
 export default BarCardSlider;

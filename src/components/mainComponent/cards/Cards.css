@@ -10,4 +10,12 @@
 .cardSectiontext{
 font-size: 50px;
   }
+
+
+#dark .cardSectiontext{
+  color: blueviolet;
+}
   
+#light .cardSectiontext{
+  color: brown;
+}

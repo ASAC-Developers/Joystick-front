@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../card/Card';
 import './Cards.css';
 import axios from 'axios';
+import Loading from '../loading/Loading';
 
 
 
@@ -32,10 +33,10 @@ function Cards() {
 
   return (
     <>
-      <p className='cardSectiontext' style={{ color: 'white' }}>Let's play!</p>
+      <p className='cardSectiontext' >Let's play!</p>
       <div className="cards-list">
         {isLoading ?
-          <h1>Loading ...</h1> :
+          <Loading/> :
           gamesData.map(item => <Card key={item.id} item={item} />)
         }
       </div>

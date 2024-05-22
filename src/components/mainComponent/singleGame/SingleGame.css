@@ -1,9 +1,10 @@
 .gameDiv{
-    margin-top:30px; 
-    height: 600px ;
+    margin-top:0px; 
+    height: 500px ;
     display: flex;
     justify-content:center;
     align-items:center;
+    margin-bottom: 30px;
 }
 .gameDiv iframe{
     box-shadow: 5px 5px 30px 7px #00e7fc65;
@@ -16,65 +17,74 @@
 
 /* Add this CSS to your styles.css file or within a <style> tag */
 
-.fixed {
-    position: fixed;
-    right: 1.5rem; /* 6 * 0.25rem (1rem = 16px) */
-    bottom: 150px; /* 6 * 0.25rem (1rem = 16px) */
-  }
-  
-  .my-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 52px;
-    height: 52px;
-    color: #6b7280; /* text-gray-500 */
-    background-color: #ffffff; /* bg-white */
-    border-radius: 50%;
-    border: 1px solid #e5e7eb; /* border-gray-200 */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
-    ring: 1px solid #ffbf00; /* ring-amber */
-    transition: all 0.2s ease-in-out; /* Smooth transition */
-  }
-  
-  .my-button:hover {
-    color: #e80a0a; /* hover:text-gray-900 */
-    background-color: #f9fafb; /* hover:bg-gray-50 */
-  }
-  
-  .my-button:focus {
-    outline: none;
-    ring: 4px solid #d1d5db; /* focus:ring-gray-300 */
-  }
-  
-  .my-button:focus-visible {
-    ring: 4px solid #d1d5db; /* focus:ring-gray-300 */
-  }
-  
-  .my-button.dark {
-    border-color: #4b5563; /* dark:border-gray-600 */
-    color: #9ca3af; /* dark:text-gray-400 */
-    background-color: #374151; /* dark:bg-gray-700 */
-  }
-  
-  .my-button.dark:hover {
-    color: #ffffff; /* dark:hover:text-white */
-    background-color: #4b5563; /* dark:hover:bg-gray-600 */
-  }
-  
-  .my-button.dark:focus {
-    ring: 4px solid #9ca3af; /* dark:focus:ring-gray-400 */
-  }
-  
-  /* Screen reader only class */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
+
+.favbtncontainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+[id='toggle-heart'] {
+  display: none;
+}
+
+[id='toggle-heart']:checked + label {
+  color: #e2264d;
+  filter: none;
+  will-change: font-size;
+}
+
+[id='toggle-heart']:checked + label:before, [id='toggle-heart']:checked + label:after {}
+
+[id='toggle-heart']:checked + label:before {
+  will-change: transform, border-width, border-color;
+}
+
+[id='toggle-heart']:checked + label:after {
+  will-change: opacity, box-shadow;
+}
+
+[id='toggle-heart']:focus + label {
+  text-shadow: 0 0 3px white, 0 1px 1px white, 0 -1px 1px white, 1px 0 1px white, -1px 0 1px white;
+}
+
+[for='toggle-heart'] {
+  align-self: center;
+  position: relative;
+  color: #888;
+  font-size: 2.5em;
+  filter: grayscale(1);
+  user-select: none;
+  cursor: pointer;
+}
+
+[for='toggle-heart']:before, [for='toggle-heart']:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  content: '';
+}
+
+[for='toggle-heart']:before {
+  box-sizing: border-box;
+  margin: -2.25rem;
+  border: solid 2.25rem #e2264d;
+  width: 4.5rem;
+  height: 4.5rem;
+  transform: scale(0);
+}
+
+[for='toggle-heart']:after {
+  margin: -0.1875rem;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+
+
+
+
