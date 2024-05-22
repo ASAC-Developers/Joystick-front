@@ -12,4 +12,5 @@
   justify-content: center; /* Adjusted to center the content */
   gap: 20px; /* Space between cards */
   margin-top: 11vh;
+  margin-bottom: 30px;
 }
