@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import logoBanner from '../../../assets/logo2.png'
+import logoBanner from '../../../assets/logo2.png';
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -9,6 +10,11 @@ const Footer = () => {
         <div className="logo-container">
           <img src={logoBanner} alt="Logo" className="footerLogo" />
         </div>
+
+        <div className="copyright">
+          &copy; {new Date().getFullYear()} Joystick. All rights reserved.
+        </div>
+
         <div className="social-media">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaFacebook />
@@ -23,6 +29,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
         </div>
+
       </div>
     </footer>
   );

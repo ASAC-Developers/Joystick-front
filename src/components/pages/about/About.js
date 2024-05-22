@@ -1,40 +1,39 @@
-import React from 'react'
-import './About.css'
- function About() {
+import React from 'react';
+import './About.css';
+import getImageUrl from "../../../assets/feature1.png";
+import AboutCard from '../../mainComponent/aboutCard/AboutCard';
+import AboutInfo from '../../mainComponent/aboutInfo/AboutInfo'
+function About() {
   return (
-  <>
-   <div className='about'>
-        <br/>
-        <h3>
-          we Are the Teams For JoyStick
-        </h3>
+    <>
+    {/* star background   */}
+    <div className="sky">
+    <div className="star"></div>
+    <div className="star"></div>
+    <div className="star"></div>
+    <div className="star"></div>
+    <div className="star"></div>
+  </div>
 
-        <br/>
-        <p>
-          Sham Omar
+    <section className="headContainer">
+      <div className="headContent">
+        <h1 className="title">joystick</h1>
+        <p className="description">
+          Dive into the world of gaming with us and enjoy endless fun!
         </p>
-        <br/>
-        <p>
-         Raneem khader
-        </p>
-        <br/>
-        <p>
-          Loay Al-Hasan
-        </p>
-        <br/>
-        <p>
-            Ahmad Abed
-        </p>
-        <br/>
-        <p>
-            Haya Sagher
-        </p>
-        <br/>
-        <a href="www.facebook.com"></a>
       </div>
-
-  </>
-  )
+      <img
+        src={getImageUrl}
+        alt="HeroImg"
+        className="heroImg"
+      />
+    </section>
+    <section className="aboutCards">
+      <AboutCard />
+      <AboutInfo />
+    </section>
+    </>
+  );
 }
 
-export default About
+export default About;

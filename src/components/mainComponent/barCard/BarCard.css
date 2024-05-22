@@ -5,7 +5,6 @@
 
 .sliderTitle {
   text-align: center;
-  font-family: sans-serif;
   font-size: 2em;
   margin-top: 20px;
   margin-bottom: 5px;
@@ -69,13 +68,13 @@
 
 @media (max-width: 768px) {
   .barCard {
-    margin: 15px; /* Smaller margin for smaller screens */
+    margin: 15px; 
   }
 }
 
 @media (max-width: 480px) {
   .barCard {
-    flex-direction: column;
+    flex-direction: row-reverse;
     text-align: center;
     width: 100%;
     margin: 20px 0;
@@ -92,12 +91,11 @@
   }
 }
 
-/* Button */
+/* .barBtn */
 
 .barBtn {
   font-size: 18px;
   color: white;
-  font-family: inherit;
   font-weight: 800;
   cursor: pointer;
   position: relative;
@@ -109,18 +107,18 @@
   transition-property: color;
 }
 
-button:focus,
-button:hover {
+.barBtn:focus,
+.barBtn:hover {
   color: #a6a6a6;
 }
 
-button:focus:after,
-button:hover:after {
+.barBtn:focus:after,
+.barBtn:hover:after {
   width: 100%;
   left: 0%;
 }
 
-button:after {
+.barBtn:after {
   content: "";
   pointer-events: none;
   bottom: -2px;

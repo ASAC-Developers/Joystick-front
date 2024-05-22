@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-
-
 .game-card {
-
-
   background-color: rgba(17, 25, 40, 0.25);
   border-radius: 12px;
   border: 1px solid rgba(236, 24, 179, 0.125);  
@@ -57,7 +50,6 @@ h1:hover {
 
 p {
   color: #fff;
-  font-family: 'Lato', sans-serif;
   text-align: center;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -105,4 +97,3 @@ p {
   border-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
 }
-/***************************************************/

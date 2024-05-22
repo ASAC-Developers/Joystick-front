@@ -1,12 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
-
-/* 
----------------------------------------------
-Header 
---------------------------------------------- 
-*/
-
 .navMenu {
   position:absolute;
   top: 20px;
@@ -26,7 +17,7 @@ Header
 .navMenu a {
   color: #f6f4e6;
   text-decoration: none;
-  font-size: 1.2em; /* == font Resize for responsive == */
+  font-size: 1.2em;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -41,34 +32,6 @@ Header
   color: #49415d;
 }
 
-/* .navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: #49415d;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.2s ease-in-out;
-} */
-
-/* Dot director (under the hider) */
-/* .navMenu a:nth-child(2):hover ~ .dot {
-  transform: translateX(calc(100% + 20px)); 
-  opacity: 1;
-}
-
-.navMenu a:nth-child(3):hover ~ .dot {
-  transform: translateX(calc(200% + 40px)); 
-  opacity: 1;
-}
-
-.navMenu a:nth-child(4):hover ~ .dot {
-  transform: translateX(calc(300% + 60px)); 
-  opacity: 1;
-} */
-
-/* Responsive styles */
-/* logo resposive with 768 screens size  */
 @media (max-width: 768px) {
   .navMenu {
     top: 10px;
@@ -84,7 +47,6 @@ Header
   }
 }
 
-/* logo response with 480 screens size */
 @media (max-width: 480px) {
   .navMenu {
     top: 5px;
@@ -101,7 +63,4 @@ Header
     font-size: 0.9em;
   }
 
-  /* .navMenu .dot {
-    display: none; /* Hide dot on small screens for simplicity 
-  } */
 }
