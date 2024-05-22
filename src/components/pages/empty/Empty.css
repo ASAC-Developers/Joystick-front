@@ -1,0 +1,18 @@
+.emptyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 69vh; 
+    text-align: center;
+}
+
+.emptyImage {
+    max-width: 50%; 
+    margin-bottom: 10px;
+}
+
+.emptyText {
+    color: rgba(255, 255, 255, 0.297); 
+    font-size: 1.5em; 
+}

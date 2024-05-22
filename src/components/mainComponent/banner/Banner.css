@@ -1,14 +1,4 @@
-/* 
----------------------------------------------
-Banner
---------------------------------------------- 
-*/
-
-/* .main-banner {
-  /* position: relative; 
-
-} */
-  
+ 
   #bg-video {
       min-width: 100%;
       min-height: 100vh;
@@ -45,7 +35,7 @@ Banner
     margin-top: 0px;
     font-size: 18px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 500;
     color: #fff;
     letter-spacing: 0.5px;
   }
@@ -55,7 +45,7 @@ Banner
     margin-bottom: 25px;
     font-size: 84px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 500;
     color: #fff;
     letter-spacing: 1px;
   }
@@ -64,6 +54,8 @@ Banner
     font-style: normal;
     color: #00E6FC;
     font-weight: 900;
+    font-family: "Handjet", sans-serif;
+
   }
 /* 
 ---------------------------------------------

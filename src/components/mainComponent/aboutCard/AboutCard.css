@@ -1,0 +1,78 @@
+.aboutCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.teamTitle {
+    font-size: 40px;
+    color: #59356d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.groupCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.cardContainer {
+    border-radius: 50%;
+    height: 312px;
+    transform: scale(0.8); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 300px; 
+    position: relative;
+}
+
+.cardContainer:hover {
+    transform: scale(0.9);
+}
+
+.circle {
+    background-color: #59356d;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 300px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 300px;
+}
+
+.divider {
+    background-color: #59356d;
+    height: 1px;
+    width: 160px;
+    margin-top: 16px;
+}
+
+.name {
+    color: #cbcbcb;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.personTitle {
+    color: #6e6e6e;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4px;
+    text-align: center;
+}
