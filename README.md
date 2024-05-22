@@ -1,7 +1,7 @@
 <div align="center">
 
 
-  <img src="/src/assets/logo2.png" alt="logo" width="200" height="auto" />
+  <img src="/src/assets/logo001.png" alt="logo" width="200" height="auto" />
   <h1>JOUYSTICK APP</h1>
   
   <p> </p>

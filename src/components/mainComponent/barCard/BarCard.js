@@ -1,47 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './BarCard.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 
-//Fetch the data from api => Add(Image, Title, Description, Release Date, GameURL=>WebSite ) 
 const BarCardSlider = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 760,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      
-      {
-        breakpoint: 932,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-
-      {
-        breakpoint: 1285.60,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-     
-    ],
-  };
-
-  //fetching data from the server
+  // Fetching data from the server
   const [gamesData, setGamesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,51 +22,50 @@ const BarCardSlider = () => {
     }
 
     getAllOnlineGames();
-  }, []); 
-
+  }, []);
 
   return (
     <div className="containerCards">
       <h1 className="sliderTitle">Online Games</h1>
+      {isLoading ? (
+        <h1>Loading ...</h1>
+      ) : (
+        <Carousel 
+          showArrows={true} 
+          showThumbs={false} 
+          showIndicators={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={3000}
+          centerMode={true}
+          centerSlidePercentage={50}
+          swipeable={true}
+          emulateTouch={true}
+        >
 
-    
-
-      {isLoading? <h1>Loading ...</h1> : 
-        <Slider {...settings}>
-          
-      {gamesData.map((game) =>
-
-        <div key={game.id} className="barCard">
-
-        <img src={game.thumbnail} alt="BarImage" />
-          <div>
-          <h2>{game.title}</h2>
-          <h3>Release Date: {game.release_date}</h3>
-          
-          <p>Description: Soon you can invest in Sid Harman's new attractive property, set in the heart of Athens.</p>
-           
-          <button className='barBtn' onClick={()=>openGame(game.game_url)}><span>Play Now</span></button>
-          </div>
- 
-        </div>
-
-      )
-    }
-        </Slider>
-      }
-      
-
-    
+          {gamesData.map((game) => (
+            <div className='singleCard'>
+            <div key={game.id} className="barCard">
+              <img src={game.thumbnail} alt="BarImage" />
+              <div>
+                <h2>{game.title}</h2>
+                <h3>Release Date: {game.release_date}</h3>
+                {/* <p>Description: Soon you can invest in Sid Harman's new attractive property, set in the heart of Athens.</p> */}
+                <button className='barBtn' onClick={() => openGame(game.game_url)}>
+                  <span>Play Now</span>
+                </button>
+              </div>
+            </div>
+            </div>
+          ))}
+        </Carousel>
+      )}
     </div>
   );
 };
 
-function openGame(url){
-
+function openGame(url) {
   window.open(url);
-
 }
 
 export default BarCardSlider;
-
-

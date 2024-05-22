@@ -1,6 +1,8 @@
 /* General styles */
 .containerCards {
   margin-bottom: 50px;
+  margin-top: 90px;
+
 }
 
 .sliderTitle {
@@ -11,33 +13,39 @@
   color: #fcfcfc;
 }
 
+.singleCard {
+  margin: 10px;
+}
+
 .barCard {
-  display: flex !important;
+  display: flex;
   align-items: center;
-  width: calc(50% - 20px);
-  max-width: 650px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: calc(90% - 3px);
+  max-width: 799px;
   padding: 30px;
   background: #554f5661;
   border-radius: 24px;
   box-shadow: 0 4px 8px rgba(235, 17, 199, 0.071);
-  margin: 30px; /* space between slides */
-  text-align: justify;  /* Adjust text alignment as needed */
-  ;
+  margin: 10px 5px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .barCard img {
-  max-width: 280px;
-  width: 100%;
-  height: auto;  /* Allow height to adjust based on width */
+  width: auto;
+  height: auto;
   object-fit: cover;
-  margin-right: 30px;
   border-radius: 24px;
 }
 
 .barCard h2 {
   color: whitesmoke;
   font-size: 22px;
-  margin: 0 0 10px 0;
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .barCard h3 {
@@ -45,6 +53,7 @@
   font-weight: 400;
   color: rgba(184, 184, 184, 0.9);
   margin: 0 0 10px 0;
+  width: 100%;
 }
 
 .barCard p {
@@ -52,32 +61,50 @@
   font-weight: 400;
   color: rgba(137, 137, 137, 0.7);
   margin-bottom: 24px;
+  width: 100%;
+  padding-left: 20px;
+}
+.carousel .carousel-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+  color: #fff0;
 }
 
-@media (max-width: 1285.60px) {
+@media (max-width: 1286px) {
   .barCard {
-    width: 100%;
+    margin: 10px;
+    width: calc(100% - 40px);
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 1024px) {
   .barCard {
+    margin: 10px;
     width: calc(100% - 50px);
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 768px) {
   .barCard {
-    margin: 15px; 
+    margin: 15px;
+    width: calc(100% - 30px);
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 480px) {
   .barCard {
-    flex-direction: row-reverse;
+    flex-direction: column;
     text-align: center;
     width: 100%;
     margin: 20px 0;
+    flex-wrap: wrap;
   }
 
   .barCard img {
@@ -91,11 +118,11 @@
   }
 }
 
-/* .barBtn */
-
+/* Button */
 .barBtn {
   font-size: 18px;
   color: white;
+  font-family: inherit;
   font-weight: 800;
   cursor: pointer;
   position: relative;
