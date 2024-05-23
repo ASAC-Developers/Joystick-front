@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './BarCard.css';
 import axios from 'axios';
-import '../loading/Loading'
+import Loading from '../loading/Loading';
  
 const BarCardSlider = () => {
   // Fetching data from the server
