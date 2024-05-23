@@ -76,3 +76,9 @@
     margin-top: 4px;
     text-align: center;
 }
+#dark .name {
+    color: #cbcbcb;
+}
+#light .name {
+    color: #1c1c1c;
+}

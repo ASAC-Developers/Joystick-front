@@ -1,7 +1,7 @@
 
 .cardsContainer {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   padding: 20px;  
@@ -12,5 +12,14 @@
   justify-content: center; /* Adjusted to center the content */
   gap: 20px; /* Space between cards */
   margin-top: 11vh;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+}
+
+
+#dark .cardsContainer{
+  background-color: black;
+}
+#light .cardsContainer{
+  background-image: linear-gradient(to left bottom, #f6cef9, #e6d7ff, #d8deff, #d0e4ff, #cfe9fc);
+  
 }

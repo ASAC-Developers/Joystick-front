@@ -29,7 +29,7 @@ function FavCard(props) {
    <div class="game-card">
    <div class="game-content">
      <img class="game-banner" src={props.item.image} alt="Game Banner"/>
-     <h1>{props.item.title}</h1>
+     <h1 className='favCardName'>{props.item.title}</h1>
    </div>
    <div class="button-container">
      <button class="game-btn outline" onClick={()=>removeFromFav(props.item.id)}>REMOVE</button>

@@ -38,13 +38,12 @@
       -5px -5px 30px 15px rgba(0,0,0,0.22);
   }
   
-  .title-white {
+ #dark .title-white {
     color: white;
   }
   
-  .title-black {
-    color: black;
-  }
+  #light .title-white {
+    color: rgb(60, 60, 60);  }
   
   @media all and (max-width: 500px) {
     .card-list {
