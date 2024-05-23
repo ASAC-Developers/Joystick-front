@@ -3,6 +3,6 @@
 }
 
 #light {
-    background-color: white;
+    background-image: linear-gradient(to left bottom, #f6cef9, #e6d7ff, #d8deff, #d0e4ff, #cfe9fc);
 
 }

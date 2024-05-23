@@ -1,9 +1,5 @@
-.game-card {
-  background-color: rgba(17, 25, 40, 0.25);
-  border-radius: 12px;
-  border: 1px solid rgba(236, 24, 179, 0.125);  
-  padding: 38px;  
-  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.125);
+ .game-card {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +7,29 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 250px;
-  height: 400px;
+  height: 400px; 
+  padding: 38px; 
+  margin-bottom: 40px;
+}
+
+
+#dark .game-card {
+ 
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(236, 24, 179, 0.125);  
+  
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.125);
+}
+
+#light .game-card {
+ 
+  background: #d5cbfd5f;
+  box-shadow: 0 4px 10px 0 rgba(95, 31, 135, 0.37);
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba(222, 135, 242, 0.18);
 }
 
 .game-card:hover {
@@ -37,16 +55,21 @@
   transform: scale(1.05);
 }
 
-h1 {
-  color: rgba(255, 255, 255, 0.98);
+.favCardName {
   text-transform: uppercase;
   font-size: 20px;
   transition: color 0.3s ease;
 }
-
-h1:hover {
-  color: rgba(0, 212, 255, 0.9);
+#dark .favCardName{
+  color: rgba(255, 255, 255, 0.98);
 }
+
+
+#light .favCardName{
+  color: rgb(60, 60, 60);}
+/* h1:hover {
+  color: rgba(0, 212, 255, 0.9);
+} */
 
 p {
   color: #fff;
@@ -75,11 +98,24 @@ p {
 
 .game-btn.outline {
   background: transparent;
+}
+#dark .game-btn.outline {
+ 
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgb(255, 255, 255);
 }
+#light .game-btn.outline {
+ 
+  color: rgba(158, 158, 158, 0.9);
+  border: 1px solid rgba(184, 184, 184, 0.9);
+}
 
-.game-btn.outline:hover {
+#light .game-btn.outline:hover {
+  transform: scale(1.125);
+ color: rgba(255, 0, 0, 0.628);
+  border: 1px solid rgba(255, 0, 0, 0.406);
+}
+#dark .game-btn.outline:hover {
   transform: scale(1.125);
  color: rgba(255, 0, 0, 0.628);
   border: 1px solid rgba(255, 0, 0, 0.406);

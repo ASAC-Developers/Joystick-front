@@ -53,7 +53,7 @@ const BarCardSlider = () => {
                 <h3>Release Date: {game.release_date}</h3>
                 {/* <p>Description: Soon you can invest in Sid Harman's new attractive property, set in the heart of Athens.</p> */}
                 <button className='barBtn' onClick={() => openGame(game.game_url)}>
-                  <span>Play Now</span>
+                  <span className='playNowBar'>Play Now</span>
                 </button>
               </div>
             </div>

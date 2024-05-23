@@ -5,12 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(0, 0, 0);
   cursor: url("https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Cursors/Ghost.cur"), auto;
-
+  background: rgb(0, 0, 0);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* #dark{
+  background: rgb(0, 0, 0);
+}
+#light{
+  background-image: linear-gradient(to left bottom, #f6cef9, #e6d7ff, #d8deff, #d0e4ff, #cfe9fc);
+} */
