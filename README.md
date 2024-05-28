@@ -10,7 +10,7 @@
 
    
 <h4>
-    <a href="#">View Demo**************</a>
+    <a href="https://664f25f9cbc0180495d65b73--beamish-begonia-01cb9a.netlify.app/">View Demo</a>
 </div>
 
 <br />
@@ -40,7 +40,10 @@
 
 <div align="center"> 
 <!--Screen our app  -->
-  <img src="#" alt="screenshot******************" />
+  <img src="/src/assets/s1.png" alt="screenshot1" />
+  <img src="/src/assets/s2.png" alt="screenshot2" />
+  <img src="/src/assets/s3.png" alt="screenshot3" />
+
 </div>
 
 
@@ -139,7 +142,7 @@ This project exists thanks to all the people who contribute.
 - Github: [@Raneem-Hamid](https://github.com/Raneem-Hamid)
 - Github: [@Loiy2002-SW](https://github.com/Loiy2002-SW)
 - Github: [@AhmadAbed96](https://github.com/AhmadAbed96)
-- Github: [@ShamAl-ShikhOmark](https://github.com/ShamAl-ShikhOmark)
+
 
 
 ## Show your support
